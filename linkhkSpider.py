@@ -1,5 +1,5 @@
 """
-Usage: scrapy runspider hklink.py -a target=xxxx -o %'(time)s'_xxxx_yy.csv
+Usage: scrapy runspider linkhkSpider.py -a target=xxxx -o %'(time)s'_xxxx.csv
 xxxx can only be shop or dine
 """
 
