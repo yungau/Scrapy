@@ -42,11 +42,12 @@ class LinkhkScrollSpider(scrapy.Spider):
 
 	def parse_details(self, response):
 		data_details = json.loads(response.text)
+		shop_details = data_details['data']['shopInfo']
 		item = response.meta['item']
-		item['address_tc'] = data_details['data']['shopInfo']['locationTc']
-		item['address_en'] = data_details['data']['shopInfo']['locationEn']
-		item['shop_type_tc'] = data_details['data']['shopInfo']['shopTypeTextTc']
-		item['shop_type_en'] = data_details['data']['shopInfo']['shopTypeTextEn']
-		item['opening_hours'] = data_details['data']['shopInfo']['openingHoursEn']
-		item['telephone'] = data_details['data']['shopInfo']['telephone']
+		item['address_tc'] = shop_details['locationTc']
+		item['address_en'] = shop_details['locationEn']
+		item['shop_type_tc'] = shop_details['shopTypeTextTc']
+		item['shop_type_en'] = shop_details['shopTypeTextEn']
+		item['opening_hours'] = shop_details['openingHoursEn']
+		item['telephone'] = shop_details['telephone']
 		yield item
