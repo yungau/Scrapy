@@ -89,7 +89,6 @@ class linkhkSpider:
                    'centre_name_tc',
                    'centre_name_en',
                    'shop_number',
-    #               'shop_id',
                    'address_tc',
                    'address_en',
                    'shop_type_tc',
