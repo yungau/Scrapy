@@ -46,7 +46,7 @@ class LinkhkScrollSpider(scrapy.Spider):
 		item['address_tc'] = data_details['data']['shopInfo']['locationTc']
 		item['address_en'] = data_details['data']['shopInfo']['locationEn']
 		item['shop_type_tc'] = data_details['data']['shopInfo']['shopTypeTextTc']
-		item['opening_hours'] = data_details['data']['shopInfo']['openingHoursEn']
 		item['shop_type_en'] = data_details['data']['shopInfo']['shopTypeTextEn']
+		item['opening_hours'] = data_details['data']['shopInfo']['openingHoursEn']
 		item['telephone'] = data_details['data']['shopInfo']['telephone']
 		yield item
